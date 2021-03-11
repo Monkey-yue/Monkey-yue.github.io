@@ -20,17 +20,22 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="真的有Y">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Monkey-yue的博客">
-<meta property="og:url" content="http://example.com/tags/%E5%B7%A5%E5%85%B7/index.html">
+  <meta name="description" content="顺序存储结构算法笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线性表存储算法">
+<meta property="og:url" content="http://example.com/2021/03/11/List/index.html">
 <meta property="og:site_name" content="Monkey-yue的博客">
-<meta property="og:description" content="真的有Y">
+<meta property="og:description" content="顺序存储结构算法笔记">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-03-11T11:39:27.908Z">
 <meta property="article:author" content="Houyue">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="在更">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/tags/%E5%B7%A5%E5%85%B7/">
+<link rel="canonical" href="http://example.com/2021/03/11/List/">
 
 
 <script id="page-configurations">
@@ -38,12 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: 工具 | Monkey-yue的博客</title>
+  <title>线性表存储算法 | Monkey-yue的博客</title>
   
 
 
@@ -161,51 +166,118 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">工具
-          <small>标签</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/11/List/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/youli.jpg">
+      <meta itemprop="name" content="Houyue">
+      <meta itemprop="description" content="真的有Y">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Monkey-yue的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          线性表存储算法
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-03-11 00:00:00 / 修改时间：19:39:27" itemprop="dateCreated datePublished" datetime="2021-03-11T00:00:00+08:00">2021-03-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BB%A3%E7%A0%81%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">代码配合使用</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BB%A3%E7%A0%81%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+        <h1 id="顺序存储结构"><a href="#顺序存储结构" class="headerlink" title="顺序存储结构"></a>顺序存储结构</h1><p>算法笔记</p>
+<span id="more"></span>
+
+<p>依次存储，地址连续中间<strong>没有空出存储单元</strong>，占用<strong>一片连续的存储空间通过计算即可知道其他元素位置</strong></p>
+<p>顺序表<strong>随机存取</strong></p>
+<hr>
+<p><code>ElemType</code>意思为<strong>元素类型的简化体</strong>为了不重复说明，<strong>数据结构</strong>中代表所有可能的数据类型。算法中出特别说明以外，ElemType默认是int类型。可以提前定义</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> ElemType;<span class="comment">//句首</span></span><br></pre></td></tr></table></figure>
+
+<p>多项式定义也是一种方法（详见List1）</p>
+<p>动态定义的<strong>分配内存</strong>大小方法</p>
+<p>注意头文件<code>stdilb.h</code></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line">SqList L;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">L.data = (ElemType*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(ElemType)*MaxSize)</span><br><span class="line">    <span class="comment">//（E*)强制转化成需要的指针类型，不同类型指针分配的条件不一样，即定义malloc计算出的空间大小如何进行分配并返回指针。</span></span><br><span class="line">    <span class="comment">//void *malloc(size_t size)分配所需内存空间，并返回一个指向它的指针 需要定义返回类型！</span></span><br><span class="line">    (<span class="keyword">char</span> *) <span class="built_in">malloc</span>(<span class="number">15</span>);</span><br></pre></td></tr></table></figure>
+
+<p>以上分配的是<strong>存储空间</strong>，<strong>不同的字符类型所需的空间是不一样的</strong>可以使用<code>sizeof(x)</code>进行运算例如<code>sizeof(int)</code>。</p>
+<p>注意使用<code>free(p)</code>函数释放存储空间，即彻底删除。</p>
+<hr>
+<p>属于C++语言</p>
+<p><code>new 类型名T（初值列表）</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *p1 = <span class="keyword">new</span> <span class="keyword">int</span>;</span><br><span class="line"><span class="keyword">int</span> *p1 = <span class="keyword">new</span> <span class="keyword">int</span>(<span class="number">10</span>);	/给<span class="number">10</span>分配一个<span class="keyword">int</span>型的内存空间</span><br></pre></td></tr></table></figure>
+
+<p>结果指向后面定义类型的分配的内存。</p>
+<p><code>delete 指针P</code>释放内存，P必须是new操作的返回值<code>delete p1</code>。</p>
+<hr>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-07T15:09:00+08:00"
-              content="2021-03-07">
-          03-07
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
+              <a href="/tags/%E5%9C%A8%E6%9B%B4/" rel="tag"># 在更</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/07/MarkdownUse/" itemprop="url">
-            <span itemprop="name">Markdown使用笔记</span>
-          </a>
-      </div>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/07/MarkdownUse/" rel="prev" title="Markdown使用笔记">
+      <i class="fa fa-chevron-left"></i> Markdown使用笔记
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
@@ -258,6 +330,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">顺序存储结构</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
