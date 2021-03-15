@@ -20,17 +20,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="真的有Y">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Monkey-yue的博客">
-<meta property="og:url" content="http://example.com/tags/%E5%9C%A8%E6%9B%B4/index.html">
+  <meta name="description" content="Pyhon笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="eval函数">
+<meta property="og:url" content="http://example.com/2021/03/15/eval%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="Monkey-yue的博客">
-<meta property="og:description" content="真的有Y">
+<meta property="og:description" content="Pyhon笔记">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-15T06:41:00.000Z">
+<meta property="article:modified_time" content="2021-03-15T06:41:49.741Z">
 <meta property="article:author" content="Houyue">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/tags/%E5%9C%A8%E6%9B%B4/">
+<link rel="canonical" href="http://example.com/2021/03/15/eval%E5%87%BD%E6%95%B0/">
 
 
 <script id="page-configurations">
@@ -38,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: 在更 | Monkey-yue的博客</title>
+  <title>eval函数 | Monkey-yue的博客</title>
   
 
 
@@ -161,51 +165,106 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">在更
-          <small>标签</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/15/eval%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/youli.jpg">
+      <meta itemprop="name" content="Houyue">
+      <meta itemprop="description" content="真的有Y">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Monkey-yue的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          eval函数
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-03-15 14:41:00 / 修改时间：14:41:49" itemprop="dateCreated datePublished" datetime="2021-03-15T14:41:00+08:00">2021-03-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+        <h1 id="Pyhon笔记"><a href="#Pyhon笔记" class="headerlink" title="Pyhon笔记"></a>Pyhon笔记</h1><span id="more"></span>
+
+<h2 id="eval函数"><a href="#eval函数" class="headerlink" title="eval函数"></a>eval函数</h2><p><code>eval()</code>以Python表达式的方式解析并执行字符串，并返回结果输出。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span>传递全局变量参数,注意字典里的:age中的age没有带引号，说明它是个变量，而不是字符串。</span><br><span class="line"><span class="comment">#这里两个参数都是全局的</span></span><br><span class="line">print(<span class="built_in">eval</span>(<span class="string">&quot;&#123;&#x27;name&#x27;:&#x27;linux&#x27;,&#x27;age&#x27;:age&#125;&quot;</span>,&#123;<span class="string">&quot;age&quot;</span>:<span class="number">1822</span>&#125;))</span><br><span class="line"><span class="comment">#输出结果：&#123;&#x27;name&#x27;: &#x27;linux&#x27;, &#x27;age&#x27;: 1822&#125;</span></span><br><span class="line">print(<span class="built_in">eval</span>(<span class="string">&quot;&#123;&#x27;name&#x27;:&#x27;linux&#x27;,&#x27;age&#x27;:age&#125;&quot;</span>,&#123;<span class="string">&quot;age&quot;</span>:<span class="number">1822</span>&#125;,&#123;<span class="string">&quot;age&quot;</span>:<span class="number">1823</span>&#125;))</span><br><span class="line"><span class="comment">#输出结果：&#123;&#x27;name&#x27;: &#x27;linux&#x27;, &#x27;age&#x27;: 1823&#125;</span></span><br><span class="line"></span><br><span class="line">————————————————</span><br><span class="line">版权声明：本文为CSDN博主「涤生手记」的原创文章，遵循CC <span class="number">4.0</span> BY-SA版权协议，转载请附上原文出处链接及本声明。</span><br><span class="line">原文链接：https://blog.csdn.net/qq_26442553/article/details/<span class="number">94396532</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="库名的使用"><a href="#库名的使用" class="headerlink" title="库名的使用"></a>库名的使用</h2><p>使用<code>import</code>方法有<strong>两种</strong></p>
+<h3 id="第一种引用："><a href="#第一种引用：" class="headerlink" title="第一种引用："></a>第一种引用：</h3><p><code>import &lt;库名&gt;</code></p>
+<p>程序可以调用库名中所有函数，使用格式：</p>
+<p>&lt;库名&gt;.&lt;函数名&gt;（&lt;函数参数&gt;)</p>
+<h3 id="第二种使用方法"><a href="#第二种使用方法" class="headerlink" title="第二种使用方法"></a>第二种使用方法</h3><p><code>from &lt;库名&gt; import &lt;函数名，函数名，函数名。。。。&gt;</code></p>
+<p><code>from &lt;库名&gt; import *</code>调用所有函数。</p>
+<p>此时，调用该库函数时不需要使用库名。</p>
+<p>为了避免函数名冲突，解释器会以最近的函数定义为准。</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-11T00:00:00+08:00"
-              content="2021-03-11">
-          03-11
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+              <a href="/tags/Python/" rel="tag"># Python</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/11/List/" itemprop="url">
-            <span itemprop="name">线性表存储算法</span>
-          </a>
-      </div>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/11/List/" rel="prev" title="线性表存储算法">
+      <i class="fa fa-chevron-left"></i> 线性表存储算法
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
@@ -258,6 +317,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Pyhon%E7%AC%94%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text">Pyhon笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#eval%E5%87%BD%E6%95%B0"><span class="nav-number">1.1.</span> <span class="nav-text">eval函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%93%E5%90%8D%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">库名的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D%E5%BC%95%E7%94%A8%EF%BC%9A"><span class="nav-number">1.2.1.</span> <span class="nav-text">第一种引用：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">1.2.2.</span> <span class="nav-text">第二种使用方法</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
