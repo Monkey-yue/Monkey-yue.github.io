@@ -20,21 +20,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Pyhon笔记">
+  <meta name="description" content="关于GIT的使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="eval函数">
-<meta property="og:url" content="http://example.com/2021/03/15/eval%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:title" content="Git与Github">
+<meta property="og:url" content="http://example.com/2021/04/26/%E5%85%B3%E4%BA%8EGIT%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="Monkey-yue的博客">
-<meta property="og:description" content="Pyhon笔记">
+<meta property="og:description" content="关于GIT的使用">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-15T06:41:00.000Z">
-<meta property="article:modified_time" content="2021-03-15T06:41:49.741Z">
+<meta property="article:published_time" content="2021-04-26T09:20:27.911Z">
+<meta property="article:modified_time" content="2021-04-27T07:55:05.561Z">
 <meta property="article:author" content="Houyue">
-<meta property="article:tag" content="笔记">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="实用技术">
+<meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/03/15/eval%E5%87%BD%E6%95%B0/">
+<link rel="canonical" href="http://example.com/2021/04/26/%E5%85%B3%E4%BA%8EGIT%E7%9A%84%E4%BD%BF%E7%94%A8/">
 
 
 <script id="page-configurations">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>eval函数 | Monkey-yue的博客</title>
+  <title>Git与Github | Monkey-yue的博客</title>
   
 
 
@@ -172,7 +172,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/15/eval%E5%87%BD%E6%95%B0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/26/%E5%85%B3%E4%BA%8EGIT%E7%9A%84%E4%BD%BF%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/youli.jpg">
@@ -185,7 +185,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          eval函数
+          Git与Github
         </h1>
 
         <div class="post-meta">
@@ -194,21 +194,23 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-03-15 14:41:00 / 修改时间：14:41:49" itemprop="dateCreated datePublished" datetime="2021-03-15T14:41:00+08:00">2021-03-15</time>
+              <time title="创建时间：2021-04-26 17:20:27" itemprop="dateCreated datePublished" datetime="2021-04-26T17:20:27+08:00">2021-04-26</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-27 15:55:05" itemprop="dateModified" datetime="2021-04-27T15:55:05+08:00">2021-04-27</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+                  <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
                 </span>
             </span>
 
@@ -223,19 +225,36 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Pyhon笔记"><a href="#Pyhon笔记" class="headerlink" title="Pyhon笔记"></a>Pyhon笔记</h1><span id="more"></span>
+        <h1 id="关于GIT的使用"><a href="#关于GIT的使用" class="headerlink" title="关于GIT的使用"></a>关于GIT的使用</h1><span id="more"></span>
 
-<h2 id="eval函数"><a href="#eval函数" class="headerlink" title="eval函数"></a>eval函数</h2><p><code>eval()</code>以Python表达式的方式解析并执行字符串，并返回结果输出。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span>传递全局变量参数,注意字典里的:age中的age没有带引号，说明它是个变量，而不是字符串。</span><br><span class="line"><span class="comment">#这里两个参数都是全局的</span></span><br><span class="line">print(<span class="built_in">eval</span>(<span class="string">&quot;&#123;&#x27;name&#x27;:&#x27;linux&#x27;,&#x27;age&#x27;:age&#125;&quot;</span>,&#123;<span class="string">&quot;age&quot;</span>:<span class="number">1822</span>&#125;))</span><br><span class="line"><span class="comment">#输出结果：&#123;&#x27;name&#x27;: &#x27;linux&#x27;, &#x27;age&#x27;: 1822&#125;</span></span><br><span class="line">print(<span class="built_in">eval</span>(<span class="string">&quot;&#123;&#x27;name&#x27;:&#x27;linux&#x27;,&#x27;age&#x27;:age&#125;&quot;</span>,&#123;<span class="string">&quot;age&quot;</span>:<span class="number">1822</span>&#125;,&#123;<span class="string">&quot;age&quot;</span>:<span class="number">1823</span>&#125;))</span><br><span class="line"><span class="comment">#输出结果：&#123;&#x27;name&#x27;: &#x27;linux&#x27;, &#x27;age&#x27;: 1823&#125;</span></span><br><span class="line"></span><br><span class="line">————————————————</span><br><span class="line">版权声明：本文为CSDN博主「涤生手记」的原创文章，遵循CC <span class="number">4.0</span> BY-SA版权协议，转载请附上原文出处链接及本声明。</span><br><span class="line">原文链接：https://blog.csdn.net/qq_26442553/article/details/<span class="number">94396532</span></span><br></pre></td></tr></table></figure>
+<p>使用GIT上传到GITHUB的仓库中是一种常见的操作，总结一下使用的代码</p>
+<p>操作平台：WINDOWS10</p>
+<h2 id="1-SSH"><a href="#1-SSH" class="headerlink" title="1.SSH"></a>1.SSH</h2><p>GitHub的传输分为SSH，HTTP两种（CLI暂无使用）HTTP的使用貌似比较简单，等以后有机会在进行讨论，SSH必须是项目的管理者或者拥有者才可使用。无需在每次访问都提供用户名。</p>
+<h3 id="1-SSH的建立"><a href="#1-SSH的建立" class="headerlink" title="1.SSH的建立"></a>1.SSH的建立</h3><p>在一台新设备需要创建一个SSH KEY才可以进行Clone和Push</p>
+<p>先在本地创建SSH KEY 输入</p>
+<p><code>ssh-keygen -t rsa -C &quot;自己的邮箱&quot;</code></p>
+<p>该邮箱为上传之后的上传者信息。</p>
+<p>第二步会要求你输入密码，可以选择。</p>
+<p>之后在C盘里用户文件夹有一个名为.ssh的文件夹，会出现一个名为id_rsa的文件，打开以后将内容复制</p>
+<p>打开Github，在左上角的头像点开Settings，点击SSH and GPG Keys  点击New SSH Key，TITLE 随便写个名字就完事了，将内容复制到下面即可。</p>
+<p>然后输入<code>ssh -T git@github.com</code>回车以后是否看到You’ve successfully authenticated …….这就表示成功。</p>
+<h2 id="2．配置GIT"><a href="#2．配置GIT" class="headerlink" title="2．配置ＧＩＴ"></a>2．配置ＧＩＴ</h2><p>在需要上传的文件夹中建立一个.git文件，命令为　<code>git init</code>　（意思为ｇｉｔ初始化）</p>
+<h2 id="3-从本地上传到Github"><a href="#3-从本地上传到Github" class="headerlink" title="3.从本地上传到Github"></a>3.从本地上传到Github</h2><p>在上传之前肯定要设置username和email</p>
+<p><code>git config --global user.name &quot;your name&quot;</code></p>
+<p><code>git config --global user.email &quot;your_email@....com&quot;</code></p>
+<p>就是输入你的github账号 具体用户名是什么用户名后面再进行研究。</p>
+<p>输入</p>
+<p><code>git add .</code></p>
+<p>或者将.改为*或者–all 意思为全部上传，或者添加单一程序仅需加上名字即可，此步骤为将文件上传到暂存区。</p>
+<p><strong>之后</strong> 输入<code>git commit -m &quot;备注&quot;</code>为你提交代码添加备注，不可以缺少该步骤，因为github的上传必须拥有备注。</p>
+<p>你也可以创建REDME.MD</p>
+<p>之后将其上传到Github上，输入指令</p>
+<p><code>git remote add origin 你仓库的SSH</code></p>
+<p><code>git push -u origin master</code>此为将代码上传到Master分支上，<strong>第一次需要<code>-u</code></strong></p>
+<p>成功上传</p>
+<h2 id="4-一些其他指令"><a href="#4-一些其他指令" class="headerlink" title="4.一些其他指令"></a>4.一些其他指令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git status #查看暂存区中的文件</span><br><span class="line">git log #查看提交历史</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="库名的使用"><a href="#库名的使用" class="headerlink" title="库名的使用"></a>库名的使用</h2><p>使用<code>import</code>方法有<strong>两种</strong></p>
-<h3 id="第一种引用："><a href="#第一种引用：" class="headerlink" title="第一种引用："></a>第一种引用：</h3><p><code>import &lt;库名&gt;</code></p>
-<p>程序可以调用库名中所有函数，使用格式：</p>
-<p>&lt;库名&gt;.&lt;函数名&gt;（&lt;函数参数&gt;)</p>
-<h3 id="第二种使用方法"><a href="#第二种使用方法" class="headerlink" title="第二种使用方法"></a>第二种使用方法</h3><p><code>from &lt;库名&gt; import &lt;函数名，函数名，函数名。。。。&gt;</code></p>
-<p><code>from &lt;库名&gt; import *</code>调用所有函数。</p>
-<p>此时，调用该库函数时不需要使用库名。</p>
-<p>为了避免函数名冲突，解释器会以最近的函数定义为准。</p>
+<h2 id="5-分支的使用"><a href="#5-分支的使用" class="headerlink" title="5.分支的使用"></a>5.分支的使用</h2><p>待定。。。</p>
 
     </div>
 
@@ -245,8 +264,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
-              <a href="/tags/Python/" rel="tag"># Python</a>
+              <a href="/tags/%E5%AE%9E%E7%94%A8%E6%8A%80%E6%9C%AF/" rel="tag"># 实用技术</a>
+              <a href="/tags/git/" rel="tag"># git</a>
           </div>
 
         
@@ -255,13 +274,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/03/11/List/" rel="prev" title="线性表存储算法">
-      <i class="fa fa-chevron-left"></i> 线性表存储算法
+    <a href="/2021/03/15/eval%E5%87%BD%E6%95%B0/" rel="prev" title="eval函数">
+      <i class="fa fa-chevron-left"></i> eval函数
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/04/26/%E5%85%B3%E4%BA%8EGIT%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="next" title="Git与Github">
-      Git与Github <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -320,7 +336,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Pyhon%E7%AC%94%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text">Pyhon笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#eval%E5%87%BD%E6%95%B0"><span class="nav-number">1.1.</span> <span class="nav-text">eval函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%93%E5%90%8D%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">库名的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D%E5%BC%95%E7%94%A8%EF%BC%9A"><span class="nav-number">1.2.1.</span> <span class="nav-text">第一种引用：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">1.2.2.</span> <span class="nav-text">第二种使用方法</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E4%BA%8EGIT%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">关于GIT的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-SSH"><span class="nav-number">1.1.</span> <span class="nav-text">1.SSH</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-SSH%E7%9A%84%E5%BB%BA%E7%AB%8B"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.SSH的建立</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%EF%BC%8E%E9%85%8D%E7%BD%AEGIT"><span class="nav-number">1.2.</span> <span class="nav-text">2．配置ＧＩＴ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E4%BB%8E%E6%9C%AC%E5%9C%B0%E4%B8%8A%E4%BC%A0%E5%88%B0Github"><span class="nav-number">1.3.</span> <span class="nav-text">3.从本地上传到Github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E4%B8%80%E4%BA%9B%E5%85%B6%E4%BB%96%E6%8C%87%E4%BB%A4"><span class="nav-number">1.4.</span> <span class="nav-text">4.一些其他指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%88%86%E6%94%AF%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.5.</span> <span class="nav-text">5.分支的使用</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
